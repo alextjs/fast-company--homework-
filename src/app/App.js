@@ -6,10 +6,10 @@ import api from "./api";
 
 function App() {
     const [users, setUsers] = useState(api.users.fetchAll());
-    console.log(users);
     const handleDelete = (userId) => {
         setUsers(users.filter((item) => item._id !== userId));
     };
+
 
     const handleToggleBookMark = (id) => {
         const newUsers = users.map((user) => {
