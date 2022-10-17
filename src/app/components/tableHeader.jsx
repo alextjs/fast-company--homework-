@@ -9,7 +9,7 @@ const TableHeader = ({ onSort, selectedSort, columns }) => {
         if (selectedSort.path === item) {
             onSort({
                 ...selectedSort,
-                order: selectedSort.order === "asc " ? "desc" : "asc"
+                order: selectedSort.order === "asc" ? "desc" : "asc"
             });
         } else {
             onSort({ path: item, order: "asc" });
@@ -31,7 +31,10 @@ const TableHeader = ({ onSort, selectedSort, columns }) => {
                         scope="col"
                     >
                         {columns[column].name}
-                        <ArrowElement selectedObj={selectedSort} path={columns[column].path}/>
+                        <ArrowElement
+                            selectedObj={selectedSort}
+                            path={columns[column].path}
+                        />
                     </th>
                 ))}
             </tr>
