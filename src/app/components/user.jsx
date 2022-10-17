@@ -15,7 +15,7 @@ const User = (props) => {
             <td>{profession.name}</td>
             <td>{completedMeetings}</td>
             <td>{`5/${rate}`}</td>
-            <td><BookMark id={_id} onToggleMark={onHandleToggleMark} mark={bookmark}/></td>
+            <td><BookMark status={_id} onToggleMark={onHandleToggleMark} mark={bookmark}/></td>
             <td><button className={"btn btn-danger p-1"} onClick={() => onHandleDelete(_id)}>Delete</button></td>
     </tr>
     )
